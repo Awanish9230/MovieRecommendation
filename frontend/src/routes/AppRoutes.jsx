@@ -5,6 +5,8 @@ import AuthLayout from "../layouts/AuthLayout";
 import ProtectedRoutes from "./ProtectedRoutes";
 
 import HomePage from "../pages/movies/HomePage";
+import SearchPage from "../pages/movies/SearchPage";
+import MovieDetailsPage from "../pages/movies/MovieDetailsPage";
 import LoginPage from "../pages/auth/LoginPage";
 import RegisterPage from "../pages/auth/RegisterPage";
 import ProfilePage from "../pages/user/ProfilePage";
@@ -17,6 +19,8 @@ const AppRoutes = () => {
 
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/movie/:id" element={<MovieDetailsPage />} />
           <Route path="/profile" element={<ProtectedRoutes><ProfilePage /></ProtectedRoutes>} />
           <Route path="/watchlist" element={<ProtectedRoutes><WatchlistPage /></ProtectedRoutes>} />
         </Route>
