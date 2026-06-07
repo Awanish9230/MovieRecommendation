@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-100 antialiased min-h-screen selection:bg-rose-500 selection:text-white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+  .glass-panel-hover {
+    @apply hover:bg-white/10 transition-all duration-300;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-orange-500;
+  }
+}
